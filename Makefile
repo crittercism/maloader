@@ -47,6 +47,10 @@ release:
 	$(MAKE) clean
 	$(MAKE) all "GCC_EXTRA_FLAGS=-DNOLOG -DNDEBUG"
 
+dpkg:
+	$(MAKE) release
+	equivs-build maloader-debian-control
+
 both:
 	$(MAKE) clean
 	$(MAKE) BITS=32 all
@@ -95,6 +99,6 @@ dist:
 	cd /tmp && rm -fr maloader-$(VERSION) && git clone git@github.com:shinh/maloader.git && rm -fr maloader/.git && mv maloader maloader-$(VERSION) && tar -cvzf maloader-$(VERSION).tar.gz maloader-$(VERSION)
 
 clean:
-	rm -f *.o *.d */*.o */*.d $(EXES)
+	rm -f *.o *.d */*.o */*.d *.deb $(EXES)
 
 -include *.d */*.d
