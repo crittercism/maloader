@@ -51,6 +51,10 @@ dpkg:
 	$(MAKE) release
 	equivs-build maloader-debian-control
 
+dpkg64:
+	$(MAKE) release
+	equivs-build maloader64-debian-control
+
 both:
 	$(MAKE) clean
 	$(MAKE) BITS=32 all

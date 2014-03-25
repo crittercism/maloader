@@ -1,0 +1,13 @@
+Package: maloader64
+Version: 1.0
+Maintainer: Crittercism Operations <cops@crittercism.com>
+
+Depends: libc6
+Architecture: amd64
+Extra-Files: README
+
+Files: extract /usr/bin/
+   ld-mac /usr/bin/
+   macho2elf /usr/bin/
+   libmac.so /usr/lib/
+
