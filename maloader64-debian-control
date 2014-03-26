@@ -5,6 +5,7 @@ Maintainer: Crittercism Operations <cops@crittercism.com>
 Depends: libc6
 Architecture: amd64
 Extra-Files: README
+Conflicts: maloader
 
 Files: extract /usr/bin/
    ld-mac /usr/bin/
